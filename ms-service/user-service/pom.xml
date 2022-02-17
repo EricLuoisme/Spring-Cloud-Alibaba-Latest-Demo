@@ -18,6 +18,7 @@
 
     <modules>
         <module>user-service-api</module>
+        <module>user-service-provider</module>
     </modules>
 
     <packaging>pom</packaging>
