@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Configuration;
 public class SentinelConfiguration {
 
     /**
-     * 设置流控规则
+     * 设置流控开启
      */
     @Bean
     public SentinelResourceAspect sentinelResourceAspect() {

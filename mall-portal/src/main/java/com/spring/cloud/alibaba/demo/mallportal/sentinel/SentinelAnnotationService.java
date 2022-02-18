@@ -13,8 +13,11 @@ import java.util.List;
 public class SentinelAnnotationService {
 
     // 注解限流, 传入的value是指为该方法限流,
-    // blockHandler指向限流异常触发方法 + blockHandlerClass指向方法的类
-    @SentinelResource(value = "sentinelTest", blockHandler = "handleSentinelTest", blockHandlerClass = SentinelExceptionHandler.class)
+    // blockHandler指向限流异常触发方法 + blockHandlerClass指向方法的类, fallback同样
+    // 需要注意, blockHandler和fallback方法, 返回类型与@SentinelResource注释的方法, 要一致
+    @SentinelResource(value = "sentinelTest",
+            blockHandler = "handleSentinelTest", blockHandlerClass = SentinelExceptionHandler.class,
+            fallback = "fallbackTest", fallbackClass = SentinelFallBackHandler.class)
     public String sentinelTest() {
         return "Request Success";
     }

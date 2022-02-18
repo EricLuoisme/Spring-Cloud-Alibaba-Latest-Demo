@@ -5,7 +5,10 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class SentinelExceptionHandler {
-    public static void handleSentinelTest(BlockException e) {
-        log.error("Block Exception Occur: " + e);
+
+    // 限流触发调用方法, 需要和被限流的Resource返回类型相同
+    public static String handleSentinelTest(BlockException e) {
+        log.error("Blocked DDOS");
+        return "You have been Blocked";
     }
 }
