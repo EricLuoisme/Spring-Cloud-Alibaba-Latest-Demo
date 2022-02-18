@@ -12,6 +12,7 @@ import java.util.List;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
+@Deprecated
 public class SentinelExample {
 
     private final static String RESOURCE = "SentinelExample";

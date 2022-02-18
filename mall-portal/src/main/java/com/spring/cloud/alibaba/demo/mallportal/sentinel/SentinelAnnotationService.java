@@ -22,20 +22,5 @@ public class SentinelAnnotationService {
         return "Request Success";
     }
 
-    // 设置限流规则 (放入启动类调用)
-    public static void flowRule() {
-        List<FlowRule> rules = new ArrayList<>();
-
-        FlowRule flowRule = new FlowRule();
-        // 对哪个资源设置限流
-        flowRule.setResource("sentinelTest");
-        // 限流的维度, QPS/线程总数
-        flowRule.setGrade(RuleConstant.FLOW_GRADE_QPS);
-        flowRule.setCount(2);
-        rules.add(flowRule);
-        // 将限流规则加入
-        FlowRuleManager.loadRules(rules);
-    }
-
 
 }
