@@ -21,6 +21,4 @@ public class SentinelAnnotationService {
     public String sentinelTest() {
         return "Request Success";
     }
-
-
 }

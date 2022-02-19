@@ -44,15 +44,23 @@
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-dubbo</artifactId>
         </dependency>
-        <!-- Sentinel 相关 -->
+
+        <!-- Sentinel集成到Spring Cloud, 不需要单独用core和aspectj -->
         <dependency>
-            <groupId>com.alibaba.csp</groupId>
-            <artifactId>sentinel-core</artifactId>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
         </dependency>
-        <dependency>
-            <groupId>com.alibaba.csp</groupId>
-            <artifactId>sentinel-annotation-aspectj</artifactId>
-        </dependency>
+
+<!--        &lt;!&ndash; Sentinel 相关 &ndash;&gt;-->
+<!--        <dependency>-->
+<!--            <groupId>com.alibaba.csp</groupId>-->
+<!--            <artifactId>sentinel-core</artifactId>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>com.alibaba.csp</groupId>-->
+<!--            <artifactId>sentinel-annotation-aspectj</artifactId>-->
+<!--        </dependency>-->
+
         <!-- Sentinel Dashboard -->
         <dependency>
             <groupId>com.alibaba.csp</groupId>
