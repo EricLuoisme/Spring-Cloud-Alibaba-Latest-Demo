@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/test")
 public class DubboController {
 
-    @DubboReference
+    @DubboReference(check = false)
     IHelloService helloService;
 
     @GetMapping("/say")
