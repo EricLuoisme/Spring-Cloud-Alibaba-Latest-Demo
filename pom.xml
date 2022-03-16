@@ -11,6 +11,7 @@
     <modules>
         <module>mall-portal</module>
         <module>ms-service</module>
+        <module>token-server</module>
     </modules>
 
     <packaging>pom</packaging>
